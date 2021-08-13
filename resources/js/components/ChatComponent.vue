@@ -86,14 +86,20 @@ export default {
     },
     created() {
         this.fetchMessages();
-    },
-    mounted() {
         window.Echo.private('lchat').listen('MessageSent', (e) => {
             console.log(e);
             console.log(e.message);
             this.allMessages.push(e.message);
             this.fetchMessages();
         })
+    },
+    mounted() {
+        // window.Echo.private('lchat').listen('MessageSent', (e) => {
+        //     console.log(e);
+        //     console.log(e.message);
+        //     this.allMessages.push(e.message);
+        //     this.fetchMessages();
+        // })
     }
 }
 </script>

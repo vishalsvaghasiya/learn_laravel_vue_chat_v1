@@ -1998,11 +1998,9 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   created: function created() {
-    this.fetchMessages();
-  },
-  mounted: function mounted() {
     var _this3 = this;
 
+    this.fetchMessages();
     window.Echo["private"]('lchat').listen('MessageSent', function (e) {
       console.log(e);
       console.log(e.message);
@@ -2011,6 +2009,13 @@ __webpack_require__.r(__webpack_exports__);
 
       _this3.fetchMessages();
     });
+  },
+  mounted: function mounted() {// window.Echo.private('lchat').listen('MessageSent', (e) => {
+    //     console.log(e);
+    //     console.log(e.message);
+    //     this.allMessages.push(e.message);
+    //     this.fetchMessages();
+    // })
   }
 });
 

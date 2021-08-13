@@ -99,7 +99,15 @@
 
     <main class="mt-5">
         <v-container fluid>
-            <Chat :user="{{auth()->user()}}"></Chat>
+            @guest
+                {{--                <Chat></Chat>--}}
+                <div>
+                    Please first Login then chat page show
+                    @yield('content')
+                </div>
+            @else
+                <Chat :user="{{auth()->user()}}"></Chat>
+            @endguest
             {{--            @yield('content')--}}
         </v-container>
     </main>

@@ -133,10 +133,10 @@ MessageController.php
 ```text
 broadcast(new MessageSent(auth()->user(), $request->message))->toOthers();
 ```
+
 php artisan make:event MessageSent
 
->npm install vuetify
-vuetify
+> npm install vuetify vuetify
 
 ```txt
 "dependencies": {
@@ -151,3 +151,13 @@ vuetify
 localhost direct redirect https://psttsr.nxwebinar.com/server.php
 aws apache server configure https://docs.aws.amazon.com/efs/latest/ug/wt2-apache-web-server.html
 https://forums.aws.amazon.com/thread.jspa?threadID=244772
+
+# do not change this name
+
+## lchat
+
+## MessageSent
+
+```
+Echo.private('lchat').listen('MessageSent', ()=> {});
+```
