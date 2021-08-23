@@ -148,10 +148,6 @@ php artisan make:event MessageSent
 }
 ```
 
-localhost direct redirect https://psttsr.nxwebinar.com/server.php
-aws apache server configure https://docs.aws.amazon.com/efs/latest/ug/wt2-apache-web-server.html
-https://forums.aws.amazon.com/thread.jspa?threadID=244772
-
 # do not change this name
 
 ## lchat
@@ -161,3 +157,7 @@ https://forums.aws.amazon.com/thread.jspa?threadID=244772
 ```
 Echo.private('lchat').listen('MessageSent', ()=> {});
 ```
+
+[Laravel Vue Realtime Messenger with Pusher](https://www.youtube.com/playlist?list=PLzz9vf6075V3eljLbn5D4seDbupbssarM)
+
+![chat_ScreenShot](img.png)
